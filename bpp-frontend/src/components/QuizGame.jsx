@@ -14,7 +14,7 @@ const QuizGame = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState('');
-  const [setIsAnswerCorrect] = useState(null);
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
   const [score, setScore] = useState(0);
   const [topScores, setTopScores] = useState([]);
 
@@ -63,7 +63,7 @@ const QuizGame = () => {
     setIsAnswerCorrect(correct);
 
     if (correct) {
-      setScore((prevScore) => prevScore + 10);
+      setScore((prevScore) => prevScore + 10); // ✅ Asegura que el puntaje se actualiza correctamente
     }
   };
 
