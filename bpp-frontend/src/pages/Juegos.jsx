@@ -21,9 +21,9 @@ const plantCategories = [
     title: 'Nivel 3',
     plants: [
       {
-        name: 'Quiz Game',
+        name: 'Quiz',
         image:
-          'https://i.pinimg.com/originals/69/8c/39/698c39cc0fe08151a185ad0f98c7f9bf.jpg',
+          'https://play-lh.googleusercontent.com/t2Lu6kUQyURsoI8UzUhzRAkEdbya9Or-vvp531TUwvAeYqul53ND2uQ7WAM6tLLuALY',
       },
       {
         name: 'Puzzle',
@@ -217,7 +217,7 @@ export default function Juegos() {
         </Box>
       )}
 
-      {/* Mostrar "Encuentra las Diferencias" solo si está seleccionado */}
+      {/* Mostrar "Encuentra las Cartas" solo si está seleccionado */}
       {selectedFindDifferences && (
         <Box mt={4}>
           <FindTheDifferences />
