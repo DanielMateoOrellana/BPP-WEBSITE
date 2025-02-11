@@ -19,6 +19,9 @@ import UploadPage from './pages/UploadPage';
 import GalleryPage from './pages/GalleryPage';
 import { colorSchemes, navItems } from './data/appData';
 import Cuadernillo from './pages/Cuadernillo';
+import VideoUpload from './pages/VideoUpload';
+import VideoGallery from './pages/VideoGallery';
+
 export default function App() {
   const [activeItem, setActiveItem] = useState('Inicio');
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -134,6 +137,8 @@ export default function App() {
                   <Route path="/juegos" element={<Juegos theme={theme} />} />
                   <Route path="/mapa" element={<Mapa theme={theme} />} />
                   <Route path="/cuadernillo" element={<Cuadernillo />} />
+                  <Route path="/upload-video" element={<VideoUpload />} />
+                  <Route path="/videos" element={<VideoGallery />} />
                   <Route
                     path="/reviews"
                     element={<Reviews theme={theme} />}

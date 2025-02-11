@@ -46,6 +46,16 @@ export const navItems = [
     route: '/gallery',
     emoji: '🖼️',
   },
+  {
+    text: 'Subir Video',
+    route: '/upload-video',
+    emoji: '🎥',
+  },
+  {
+    text: 'Videos',
+    route: '/videos',
+    emoji: '📹',
+  },
 ];
 
 export const learningOptions = [
@@ -90,6 +100,20 @@ export const learningOptions = [
       'https://res.cloudinary.com/dbiarx9tr/image/upload/v1739161039/bojwtrg2w2vjgfnsr1l5.jpg',
     icon: '📚',
     route: '/cuadernillo',
+  },
+  {
+    title: 'Subir Videos',
+    image:
+      'https://res.cloudinary.com/dbiarx9tr/image/upload/v1739161039/bojwtrg2w2vjgfnsr1l5.jpg',
+    icon: '🎥',
+    route: '/upload-video',
+  },
+  {
+    title: 'Galería de Videos',
+    image:
+      'https://res.cloudinary.com/dbiarx9tr/image/upload/v1739161039/bojwtrg2w2vjgfnsr1l5.jpg',
+    icon: '📹',
+    route: '/videos',
   },
 ];
 

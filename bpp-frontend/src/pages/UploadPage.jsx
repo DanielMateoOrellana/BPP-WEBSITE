@@ -12,6 +12,7 @@ import {
 } from '@mui/material';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import BackupIcon from '@mui/icons-material/Backup';
 
 const CLOUDINARY_UPLOAD_PRESET = 'images';
 const CLOUDINARY_CLOUD_NAME = 'dbiarx9tr';
@@ -76,42 +77,77 @@ const UploadPage = ({ theme }) => {
         Subir Imagen
       </Typography>
 
-      <form onSubmit={handleUpload}>
-        <input
-          type="file"
-          onChange={(e) => {
-            const selectedFile = e.target.files[0];
-            if (selectedFile) {
-              setFile(selectedFile);
-              setPreview(URL.createObjectURL(selectedFile));
-            }
-          }}
-          accept="image/*"
-          style={{ marginBottom: theme.spacing(2) }}
-        />
-
-        {preview && (
-          <Box mb={2}>
-            <CardMedia
-              component="img"
-              image={preview}
-              alt="Preview"
-              sx={{ maxHeight: 200, width: 'auto', borderRadius: 1 }}
-            />
-          </Box>
-        )}
-
-        <Button
-          variant="contained"
-          type="submit"
-          disabled={!file || loading}
-          startIcon={
-            loading ? <CircularProgress size={20} /> : <CloudUploadIcon />
+      <input
+        type="file"
+        id="file-input"
+        onChange={(e) => {
+          const selectedFile = e.target.files[0];
+          if (selectedFile) {
+            setFile(selectedFile);
+            setPreview(URL.createObjectURL(selectedFile));
           }
-        >
-          {loading ? 'Subiendo...' : 'Subir Imagen'}
-        </Button>
-      </form>
+        }}
+        accept="image/*"
+        style={{ display: 'none' }}
+      />
+
+      <Box
+        component="label"
+        htmlFor="file-input"
+        sx={{
+          border: '2px dashed',
+          borderColor: 'grey.300',
+          borderRadius: 2,
+          p: 6,
+          textAlign: 'center',
+          cursor: 'pointer',
+          transition: '0.3s',
+          mb: 3,
+          '&:hover': {
+            borderColor: 'primary.main',
+            bgcolor: 'action.hover',
+          },
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        <BackupIcon sx={{ fontSize: 48, color: 'primary.main', mb: 2 }} />
+        <Typography variant="h6" gutterBottom>
+          Arrastra una imagen o haz clic aquí
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          PNG, JPG, GIF hasta 10MB
+        </Typography>
+      </Box>
+
+      {preview && (
+        <Box sx={{ mt: 3, textAlign: 'center' }}>
+          <CardMedia
+            component="img"
+            image={preview}
+            alt="Preview"
+            sx={{
+              maxHeight: 200,
+              width: 'auto',
+              margin: '0 auto',
+              borderRadius: 1,
+              boxShadow: 1,
+            }}
+          />
+          <Button
+            variant="contained"
+            onClick={handleUpload}
+            disabled={loading}
+            startIcon={
+              loading ? <CircularProgress size={20} /> : <CloudUploadIcon />
+            }
+            sx={{ mt: 2 }}
+          >
+            {loading ? 'Subiendo...' : 'Subir Imagen'}
+          </Button>
+        </Box>
+      )}
 
       {uploadedUrl && (
         <Box mt={4}>

@@ -19,6 +19,7 @@ const scoresRouter = require("./routes/scores");
 const dataRouter = require("./routes/data");
 const reviewsRouter = require("./routes/reviews"); // ✅ Importado correctamente
 const appDataRouter = require('./routes/appData');
+const videoRouter = require('./routes/cloudinary_videos');
 // 🔥 Configurar Middleware
 app.use(cors());
 app.use(logger("dev"));
@@ -44,6 +45,7 @@ app.use("/api/data", dataRouter); // 📌 Rutas para información de flora/fauna
 app.use("/api/reviews", reviewsRouter); // 📌 Rutas para reseñas
 app.use('/api/cloudinary', cloudinaryRouter);// 🔥 Manejo de errores (404)
 app.use('/api/appdata', appDataRouter);
+app.use('/api/videos', videoRouter);
 app.use((req, res, next) => {
   next(createError(404));
 });
