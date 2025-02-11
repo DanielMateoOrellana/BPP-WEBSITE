@@ -20,6 +20,9 @@ import PDFViewer from './pages/PDFViewer';
 import UploadPage from './pages/UploadPage';
 import GalleryPage from './pages/GalleryPage';
 import { colorSchemes, navItems } from './data/appData';
+import Cuadernillo from './pages/Cuadernillo';
+import VideoUpload from './pages/VideoUpload';
+import VideoGallery from './pages/VideoGallery';
 
 // Función para determinar la estación del año en Ecuador
 const getSeason = () => {
@@ -155,13 +158,13 @@ export default function App() {
                   <Route path="/flora" element={<Flora theme={theme} />} />
                   <Route path="/juegos" element={<Juegos theme={theme} />} />
                   <Route path="/mapa" element={<Mapa theme={theme} />} />
+                  <Route path="/cuadernillo" element={<Cuadernillo />} />
+                  <Route path="/pdf" element={<Cuadernillo />} />
+                  <Route path="/upload-video" element={<VideoUpload />} />
+                  <Route path="/videos" element={<VideoGallery />} />
                   <Route
                     path="/reviews"
                     element={<Reviews theme={theme} />}
-                  />
-                  <Route
-                    path="/pdf"
-                    element={<PDFViewer pdfUrl="/cuadernillo.pdf" />}
                   />
                   <Route
                     path="/upload"

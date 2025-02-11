@@ -133,24 +133,28 @@ export default function Comunidad({ theme }) {
       <Grid container spacing={3}>
         {[
           {
-            user: 'MarioMayo',
-            image: 'https://picsum.photos/seed/forest/300/300',
-            description: 'Encontré esta hermosa flor en el bosque.',
+            user: 'KevinExplora',
+            image:
+              'https://res.cloudinary.com/dbiarx9tr/image/upload/v1739233943/vrazplsxyitybpt6nuo2.png',
+            description: 'Comunidad pensando que haremos para el bosque',
           },
           {
             user: 'LuisaExplora',
-            image: 'https://picsum.photos/seed/deer/300/300',
-            description: 'Un ciervo que vi durante mi caminata.',
+            image:
+              'https://res.cloudinary.com/dbiarx9tr/image/upload/v1739234015/ogwxho33dtgffjycumxc.png',
+            description: 'Mirador durante mi caminata.',
           },
           {
-            user: 'CarlosNaturaleza',
-            image: 'https://picsum.photos/seed/waterfall/300/300',
-            description: 'Cascada escondida en la montaña.',
+            user: 'Naturaleza',
+            image:
+              'https://res.cloudinary.com/dbiarx9tr/image/upload/v1739233857/bf702nx4jodpep9rdxa8.jpg',
+            description: 'Caminata hacia la reserva',
           },
           {
-            user: 'AnaAventurera',
-            image: 'https://picsum.photos/seed/tracks/300/300',
-            description: 'Huellas de un animal misterioso.',
+            user: 'Aventurera',
+            image:
+              'https://res.cloudinary.com/dbiarx9tr/image/upload/v1739234091/fg02haesf8w81rv3f5qo.png',
+            description: 'Niños probando nuestros juegos.',
           },
         ].map((post, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
@@ -213,16 +217,19 @@ export default function Comunidad({ theme }) {
       <Grid container spacing={3}>
         {[
           {
-            title: 'Mi primera foto',
-            image: 'https://picsum.photos/seed/landscape/300/300',
+            title: 'Foto de las distintas semillas que hay en el bosque',
+            image:
+              'https://res.cloudinary.com/dbiarx9tr/image/upload/v1739234341/c6mbubdyw3p6nprhrrk2.jpg',
           },
           {
-            title: 'Mi segunda foto',
-            image: 'https://picsum.photos/seed/wildlife/300/300',
+            title: 'Nuestra comunidad ',
+            image:
+              'https://res.cloudinary.com/dbiarx9tr/image/upload/v1739234549/l3gxniut9yql7df6jgfb.png',
           },
           {
             title: 'Descubrimiento interesante',
-            image: 'https://picsum.photos/seed/plant/300/300',
+            image:
+              'https://res.cloudinary.com/dbiarx9tr/image/upload/v1739234461/refm1zjq2uxhmdrg1twl.png',
           },
         ].map((post, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
